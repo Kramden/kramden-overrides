@@ -1,0 +1,12 @@
+Source: kramden-overrides
+Section: x11
+Priority: optional
+Maintainer: Ken VanDine <ken.vandine@ubuntu.com>
+Build-Depends: debhelper (>= 11),
+Standards-Version: 4.1.3
+
+Package: kramden-overrides
+Architecture: all
+Depends: ${misc:Depends},
+Description: Kramden Ubuntu Overrides
+ The default wallpaper for a Kramden install of Ubuntu.
