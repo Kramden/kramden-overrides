@@ -1,3 +1,9 @@
+kramden-overrides (0.2.1) jammy; urgency=medium
+
+  * Added anydesk and vlc to favorites
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 01 Mar 2023 14:39:26 -0500
+
 kramden-overrides (0.2) jammy; urgency=medium
 
   * Updated favorites to include google-chrome-stable
