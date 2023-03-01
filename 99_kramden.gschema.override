@@ -1,3 +1,8 @@
 [org.gnome.desktop.background:ubuntu]
 picture-uri = 'file:///usr/share/backgrounds/kramden.png'
 picture-uri-dark = 'file:///usr/share/backgrounds/kramden.png'
+
+[org.gnome.shell:ubuntu]
+always-show-log-out = true
+favorite-apps = [ 'google-chrome-stable.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'rhythmbox.desktop', 'libreoffice-writer.desktop', 'snap-store_ubuntu-software.desktop', 'yelp.desktop' ]
+

@@ -1,3 +1,9 @@
+kramden-overrides (0.2) jammy; urgency=medium
+
+  * Updated favorites to include google-chrome-stable
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 01 Mar 2023 14:16:35 -0500
+
 kramden-overrides (0.1) jammy; urgency=medium
 
   * Initial package
