@@ -5,5 +5,5 @@ To build source package:
 
 To upload to the PPA (replace VERSION):
 
-  dput ppa:kramden/kramden  ../build-area/kramden-overrides_VERSION_source.changes
+  dput ppa:kramden-team/kramden  ../build-area/kramden-overrides_VERSION_source.changes
 
