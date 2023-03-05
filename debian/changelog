@@ -1,3 +1,9 @@
+kramden-overrides (0.3.2) jammy; urgency=medium
+
+  * Updated app build with sudo fix
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Sun, 05 Mar 2023 15:32:28 -0500
+
 kramden-overrides (0.3.1) jammy; urgency=medium
 
   * reboot directly from provider-reset
