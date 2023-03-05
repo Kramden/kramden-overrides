@@ -6,6 +6,7 @@ then
 	exit 1
 fi
 
-sudo touch /var/lib/gdm3/run-initial-setup
-sudo chown gdm:gdm /var/lib/gdm3/run-initial-setup
-sudo userdel -rf ubuntu 2>/dev/null
+touch /var/lib/gdm3/run-initial-setup
+chown gdm:gdm /var/lib/gdm3/run-initial-setup
+userdel -rf ubuntu 2>/dev/null
+reboot
