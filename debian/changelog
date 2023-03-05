@@ -1,3 +1,9 @@
+kramden-overrides (0.2.3) jammy; urgency=medium
+
+  * Added provider_setup app
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Sun, 05 Mar 2023 09:26:28 -0500
+
 kramden-overrides (0.2.2) jammy; urgency=medium
 
   * Fixed favorite for google-chrome

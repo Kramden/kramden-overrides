@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Provider Setup Tool
+Comment=Provider Setup Tool
+Exec=pkexec /usr/lib/provider/bundle/provider_setup
+Icon=/usr/share/provider/icon.png
+Terminal=false
+Categories=Utilities;
