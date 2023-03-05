@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+if [ ! -d "/home/ubuntu" ];
+then
+	echo "/home/ubuntu doesn't exist, exiting"
+	exit 1
+fi
+
+sudo touch /var/lib/gdm3/run-initial-setup
+sudo chown gdm:gdm /var/lib/gdm3/run-initial-setup
+sudo userdel -r ubuntu 2>/dev/null

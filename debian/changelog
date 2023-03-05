@@ -1,8 +1,9 @@
-kramden-overrides (0.2.5) UNRELEASED; urgency=medium
+kramden-overrides (0.3) UNRELEASED; urgency=medium
 
-  * Updated
+  * Updated App
+  * Added provider-reset
 
- -- Ken VanDine <ken.vandine@canonical.com>  Sun, 05 Mar 2023 11:02:03 -0500
+ -- Ken VanDine <ken.vandine@canonical.com>  Sun, 05 Mar 2023 11:24:40 -0500
 
 kramden-overrides (0.2.4) jammy; urgency=medium
 
