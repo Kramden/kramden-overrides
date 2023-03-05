@@ -8,6 +8,7 @@ Standards-Version: 4.1.3
 Package: kramden-overrides
 Architecture: amd64
 Depends: ${misc:Depends},
- landscape-client
+ landscape-client,
+ libfuse2
 Description: Kramden Ubuntu Overrides
- The default wallpaper for a Kramden install of Ubuntu.
+ The default settings for a Kramden install of Ubuntu.

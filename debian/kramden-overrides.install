@@ -1,6 +1,6 @@
 kramden.png usr/share/backgrounds/
 99_kramden.gschema.override usr/share/glib-2.0/schemas/
 provider.conf etc/
-icon.png usr/share/provider/icon.png
+icon.png usr/share/provider/
 provider-setup.desktop usr/share/applications/
-bundle usr/lib/provider/
+provider_setup.AppImage usr/lib/provider/
