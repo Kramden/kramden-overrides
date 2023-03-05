@@ -1,10 +1,11 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=Provider Setup Tool
+Name=Kramden Setup
 Comment=Provider Setup Tool
 Exec=/usr/lib/provider/provider_setup.AppImage
 Icon=/usr/share/provider/icon.png
 Terminal=false
 Categories=Utilities;
 Keywords=Kramden;Compudopt;
+NoDisplay=true
