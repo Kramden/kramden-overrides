@@ -1,4 +1,4 @@
-kramden-overrides (0.3) UNRELEASED; urgency=medium
+kramden-overrides (0.3) jammy; urgency=medium
 
   * Updated App
   * Added provider-reset
