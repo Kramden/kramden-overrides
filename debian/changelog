@@ -1,3 +1,9 @@
+kramden-overrides (0.3.3) jammy; urgency=medium
+
+  * Added Keywords to desktop file
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Sun, 05 Mar 2023 15:35:25 -0500
+
 kramden-overrides (0.3.2) jammy; urgency=medium
 
   * Updated app build with sudo fix

@@ -7,3 +7,4 @@ Exec=/usr/lib/provider/provider_setup.AppImage
 Icon=/usr/share/provider/icon.png
 Terminal=false
 Categories=Utilities;
+Keywords=Kramden;Compudopt;
