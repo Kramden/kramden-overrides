@@ -6,3 +6,5 @@ picture-uri-dark = 'file:///usr/share/backgrounds/kramden.png'
 always-show-log-out = true
 favorite-apps = [ 'google-chrome.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'rhythmbox.desktop', 'libreoffice-writer.desktop', 'anydesk.desktop', 'vlc_vlc.desktop', 'snap-store_ubuntu-software.desktop', 'yelp.desktop' ]
 
+[org.gnome.desktop.interface:ubuntu]
+clock-format = '12h'
