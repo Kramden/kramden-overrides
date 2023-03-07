@@ -1,3 +1,9 @@
+kramden-overrides (0.3.7) jammy; urgency=medium
+
+  * Updated App build
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Tue, 07 Mar 2023 09:33:13 -0500
+
 kramden-overrides (0.3.6) jammy; urgency=medium
 
   * GSettings override for 12h clock
