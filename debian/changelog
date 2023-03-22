@@ -1,3 +1,9 @@
+kramden-overrides (0.3.11) jammy; urgency=medium
+
+  * Updated app to 0.0.11
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 22 Mar 2023 11:52:23 -0400
+
 kramden-overrides (0.3.10) jammy; urgency=medium
 
   * Updated app to 0.0.10
