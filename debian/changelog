@@ -1,3 +1,9 @@
+kramden-overrides (0.3.12) jammy; urgency=medium
+
+  * Updated urls for landscape now that Kramden's server is up
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Tue, 28 Mar 2023 13:35:49 -0400
+
 kramden-overrides (0.3.11) jammy; urgency=medium
 
   * Updated app to 0.0.11
