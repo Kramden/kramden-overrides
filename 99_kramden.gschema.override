@@ -8,3 +8,6 @@ favorite-apps = [ 'google-chrome.desktop', 'thunderbird.desktop', 'org.gnome.Nau
 
 [org.gnome.desktop.interface:ubuntu]
 clock-format = '12h'
+color-scheme = 'prefer-dark'
+gtk-theme = 'Yaru-blue-dark'
+icon-theme = 'Yaru-blue-dark'
