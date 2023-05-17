@@ -13,29 +13,4 @@ gtk-theme = 'Yaru-blue-dark'
 icon-theme = 'Yaru-blue-dark'
 
 [org.gnome.desktop.app-folders]
-folder-children = ['Audio', 'Graphics', 'Games', 'Utilities', 'Accessories', 'Education']
-
-[org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Audio]
-name = 'Audio'
-apps = ['audacity_audacity.desktop', 'spotify_spotify.desktop']
-categories = ['Audio']
-
-[org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Accessories]
-name = 'Accessories'
-apps = ['gnome-dictionary_gnome-dictionary.desktop', 'gnome-weather_gnome-weather.desktop']
-categories = ['Accessories']
-
-[org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Graphics]
-name = 'Graphics'
-apps = ['gimp.desktop', 'blender_blender.desktop', 'darktable_darktable.desktop', 'inkscape_inkscape.desktop', 'kdenlive_kdenlive.desktop', 'kolourpaint_kolourpaint.desktop', 'krita_krita.desktop', 'tux-paint_tux-paint.desktop', 'lazpaint_lazpaint.desktop', 'pinta_pinta.desktop', 'paintsupreme-3d_paintsupreme-3d.desktop']
-categories = ['Graphics', 'Photos', 'Photo']
-
-[org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Games]
-name = 'Games'
-apps = ['0ad_0ad.desktop', 'dragonsapprentice_dragonsapprentice.desktop', 'fablemaker_fablemaker.desktop', 'frogsquash_frogsquash.desktop', 'gcompris_gcompris.desktop', 'gnome-chess_gnome-chess.desktop', 'gnome-nibbles_gnome-nibbles.desktop', 'iagno_iagno.desktop', 'marsshooter_marsshooter.desktop', 'memory-tiles_memory-tiles.desktop', 'midnightmareteddy_midnightmareteddy.desktop', 'aqueducts_aqueducts.desktop', 'quadrapassel_quadrapassel.desktop', 'steam_steam.desktop', 'supertux_supertux.desktop', 'supertuxkart_supertuxkart.desktop', 'tank-warriors_tank-warriors.desktop', 'thepassage_thepassage.desktop', 'white-house_white-house.desktop']
-categories = ['Games']
-
-[org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Education]
-name = 'Education'
-apps = ['kalzium_kalzium.desktop', 'kgeography_kgeography.desktop', 'stellarium-daily_stellarium-daily.desktop', 'tuxtyping_tuxtyping.desktop', 'missilemath_missilemath.desktop']
-categories = ['Education']
+folder-children = ['Audio', 'Graphics', 'Game', 'Utilities', 'Accessories', 'Education']
