@@ -1,3 +1,9 @@
+kramden-overrides (0.3.18) jammy; urgency=medium
+
+  * Updated wallpaper
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 21 Sep 2023 22:52:28 -0400
+
 kramden-overrides (0.3.17) jammy; urgency=medium
 
   * Added skel pdf content
