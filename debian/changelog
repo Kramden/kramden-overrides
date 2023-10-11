@@ -1,3 +1,10 @@
+kramden-overrides (0.3.19) jammy; urgency=medium
+
+  * 99_kramden.gschema.override
+    - fixed snap-store favorite
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 11 Oct 2023 17:33:29 -0400
+
 kramden-overrides (0.3.18) jammy; urgency=medium
 
   * Updated wallpaper
