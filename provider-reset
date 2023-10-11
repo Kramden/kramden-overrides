@@ -9,4 +9,4 @@ fi
 touch /var/lib/gdm3/run-initial-setup
 chown gdm:gdm /var/lib/gdm3/run-initial-setup
 userdel -rf ubuntu 2>/dev/null
-reboot
+systemctl restart gdm3
