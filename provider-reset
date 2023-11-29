@@ -6,4 +6,7 @@ rm -rf /home/owner/.{config,cache,local,ssh,gnupg}
 # ensure all install snaps have no user data
 rm -rf /home/owner/snap
 
+# delete rc.local as it was only needed for provisioning
+rm -f /etc/rc.local
+
 systemctl restart gdm3
