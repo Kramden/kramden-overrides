@@ -13,4 +13,4 @@ gtk-theme = 'Yaru-blue-dark'
 icon-theme = 'Yaru-blue-dark'
 
 [org.gnome.desktop.app-folders]
-folder-children = ['Audio', 'Graphics', 'Game', 'Utilities', 'Accessories', 'Education']
+folder-children = ['AudioVideo', 'Graphics', 'Game', 'Utilities', 'Accessories', 'Education']

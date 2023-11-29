@@ -5,4 +5,6 @@ icon.png usr/share/provider/
 provider-setup.desktop usr/share/applications/
 provider_setup.AppImage usr/lib/provider/
 provider-reset usr/share/provider/
-skel/Desktop/Kramden/dummy.pdf /etc/skel/Desktop/Kramden/
+gsettings-desktop-directories-prime usr/share/provider/
+kramden-gsettings-prime.desktop /etc/xdg/autostart/
+skel/Desktop/Kramden/KramdenComputerInfo.pdf /etc/skel/Desktop/Kramden/

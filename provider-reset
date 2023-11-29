@@ -1,12 +1,9 @@
 #!/bin/bash
 #
-if [ ! -d "/home/ubuntu" ];
-then
-	echo "/home/ubuntu doesn't exist, exiting"
-	exit 1
-fi
 
-touch /var/lib/gdm3/run-initial-setup
-chown gdm:gdm /var/lib/gdm3/run-initial-setup
-userdel -rf ubuntu 2>/dev/null
+# delete any user specific settings data
+rm -rf /home/owner/.{config,cache,local,ssh,gnupg}
+# ensure all install snaps have no user data
+rm -rf /home/owner/snap
+
 systemctl restart gdm3
