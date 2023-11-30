@@ -1,3 +1,10 @@
+kramden-overrides (0.3.24) jammy; urgency=medium
+
+  * provider-reset
+    - improved reset logic
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 29 Nov 2023 19:00:29 -0500
+
 kramden-overrides (0.3.23) jammy; urgency=medium
 
   * gsettings-desktop-directories-prime
