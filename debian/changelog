@@ -1,3 +1,9 @@
+kramden-overrides (0.3.25) UNRELEASED; urgency=medium
+
+  * Dropped anydesk from favorites
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 06 Dec 2023 19:33:18 -0500
+
 kramden-overrides (0.3.24) jammy; urgency=medium
 
   * provider-reset
