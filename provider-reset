@@ -5,6 +5,9 @@ homedir=/home/owner
 # ensure any google-chrome profiles created are removed
 rm -rf $homedir/.{config,cache}/google-chrome
 rm -f $homedir/.config/{gnome-initial-setup-done,kramden-gsettings-prime-done}
+rm -rf $homedir/.config/autostart
+rm -rf $homedir/.local/share/applications
+
 # ensure all installed snaps have no user data
 rm -rf $homedir/owner/snap
 
