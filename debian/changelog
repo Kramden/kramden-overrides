@@ -1,6 +1,28 @@
-kramden-overrides (0.3.25) UNRELEASED; urgency=medium
+kramden-overrides (0.4.0) jammy; urgency=medium
+
+  * provider_setup.AppImage updated to include branding changes and built 
+    with latest flutter and deps
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 07 Dec 2023 12:50:23 -0500
+
+kramden-overrides (0.3.25.2) jammy; urgency=medium
+
+  * Fixed install of pdf
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 07 Dec 2023 12:23:27 -0500
+
+kramden-overrides (0.3.25.1) jammy; urgency=medium
+
+  [ Marshall Burkes ]
+  * Add system to app folders
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 07 Dec 2023 12:18:12 -0500
+
+kramden-overrides (0.3.25) jammy; urgency=medium
 
   * Dropped anydesk from favorites
+  * Updated info pdf file and kramden icon
+  * Add system to app folders
 
  -- Ken VanDine <ken.vandine@canonical.com>  Wed, 06 Dec 2023 19:33:18 -0500
 
