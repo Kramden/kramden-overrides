@@ -1,3 +1,9 @@
+kramden-overrides (0.4.0-0mantic1) mantic; urgency=medium
+
+  * Rebuild for mantic
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 08 Dec 2023 11:35:05 -0500
+
 kramden-overrides (0.4.0) jammy; urgency=medium
 
   * provider_setup.AppImage updated to include branding changes and built 
