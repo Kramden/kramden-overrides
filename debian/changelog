@@ -1,3 +1,10 @@
+kramden-overrides (0.4.2-0mantic1) mantic; urgency=medium
+
+  * provider-reset
+    - improved logic, ensure it's only run once
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Tue, 12 Dec 2023 13:11:54 -0500
+
 kramden-overrides (0.4.1-0mantic2) mantic; urgency=medium
 
   * provider-reset
