@@ -1,4 +1,4 @@
-kramden-overrides (0.4.1-0mantic1) jammy; urgency=medium
+kramden-overrides (0.4.1-0mantic2) mantic; urgency=medium
 
   * provider-reset
     - ensure we cleanup autostart files
