@@ -1,0 +1,74 @@
+#!/usr/bin/python3
+
+import gi
+gi.require_version('Gtk', '3.0')
+gi.require_version('WebKit2', '4.1')
+from gi.repository import Gtk, WebKit2
+import os
+
+class PDFEmbedApp(Gtk.Window):
+    def __init__(self):
+        Gtk.Window.__init__(self, title="Kramden Computer Intro")
+        self.set_default_size(800, 768)
+        self.connect('delete_event', self.on_quit)
+
+        # Create a HeaderBar
+        header_bar = Gtk.HeaderBar()
+        header_bar.set_show_close_button(True)
+        header_bar.props.title = "Kramden Computer Intro"
+
+        # Create a button
+        #image = Gtk.Image.new_from_icon_name("gtk-ok", Gtk.IconSize.LARGE_TOOLBAR)
+        #button = Gtk.Button()
+        #button.set_image(image)
+        #button.connect("clicked", self.on_quit)
+
+        # Add the button to the HeaderBar
+        #header_bar.pack_end(button)
+
+        # Set the HeaderBar as the title bar
+        self.set_titlebar(header_bar)
+
+        # Create a WebView widget
+        self.webview = WebKit2.WebView()
+        self.add(self.webview)
+
+        # Disable navigation and context menu
+        settings = self.webview.get_settings()
+        settings.set_property("enable-plugins", False)
+        settings.set_property("enable-javascript", True)
+
+        # Load the PDF file
+        pdf = "Kramden Computer Info.pdf"
+        pdf_dir = "/usr/share/provider/"
+        pdf_path = os.path.join(pdf_dir, pdf)
+        #pdf_path = os.path.join(os.getcwd(), pdf)
+        self.webview.load_uri("file://" + pdf_path)
+
+    def on_quit(self, widget, arg=None):
+        viewed_path = os.path.join(os.path.expanduser('~'), ".config", "kramden-intro-done")
+        open(viewed_path, "w").close()
+        Gtk.main_quit()
+
+    def disable_controls(self):
+        disable_script = """
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        """
+        self.webview.evaluate_javascript(disable_script, 3, None, None, None)
+
+        # Connect the 'destroy' event to quit the application
+        self.connect("destroy", Gtk.main_quit)
+
+# Run the application
+if __name__ == "__main__":
+    # Don't show for the ubuntu user (provider setup)
+    if os.getlogin() == 'ubuntu' or os.path.exists("/home/owner/.config/autostart/provider-setup.desktop"):
+        quit()
+
+    app = PDFEmbedApp()
+    app.disable_controls()
+    app.show_all()
+    Gtk.main()
+

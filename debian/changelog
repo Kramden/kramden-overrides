@@ -1,3 +1,12 @@
+kramden-overrides (0.4.90-0mantic1) UNRELEASED; urgency=medium
+
+  * Added kramden-intro (PDF viewer)
+  * Drop skel, pdf is now shown via kramden-intro
+  * Added kramden-intro to favorites
+  * Depend on gir1.2-webkit2-4.1 for kramden-intro
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 13 Dec 2023 15:37:45 -0500
+
 kramden-overrides (0.4.2-0mantic1) mantic; urgency=medium
 
   * provider-reset
