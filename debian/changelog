@@ -1,3 +1,10 @@
+kramden-overrides (0.4.91-0mantic1) mantic; urgency=medium
+
+  * debian/control
+    - dropped depends
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 14 Dec 2023 14:41:03 -0500
+
 kramden-overrides (0.4.90-0mantic1) mantic; urgency=medium
 
   * Added kramden-intro (PDF viewer)
