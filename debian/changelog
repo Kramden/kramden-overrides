@@ -1,4 +1,4 @@
-kramden-overrides (0.4.92-0mantic1) UNRELEASED; urgency=medium
+kramden-overrides (0.4.92-0mantic1) mantic; urgency=medium
 
   * kramden-install-test
     - Added script to test final installation
