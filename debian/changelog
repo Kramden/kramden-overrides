@@ -1,4 +1,4 @@
-kramden-overrides (0.4.93-0mantic1) UNRELEASED; urgency=medium
+kramden-overrides (0.4.93-0mantic1) mantic; urgency=medium
 
   * provider-reset
     - Delete deployment wifi during reset and seed guest wifi on device
