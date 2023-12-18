@@ -22,8 +22,8 @@ rm -f /etc/rc.local
 mkdir -p /var/cache/provider
 touch /var/cache/provider/done
 
-# Delete the Kramden Deployment wifi connection
-nmcli c delete kramden-deployment 2/dev/null || true
+# Delete the Kramden Deploy wifi connection
+nmcli c delete kramden-deploy 2/dev/null || true
 
 # Add connection for Kramden Guest network
 nmcli device wifi connect "Kramden Guest" password iamatkramden name kramden-guest 2/dev/null || true
