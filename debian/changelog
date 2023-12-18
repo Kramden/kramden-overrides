@@ -1,3 +1,10 @@
+kramden-overrides (0.4.94-0mantic1) mantic; urgency=medium
+
+  * provider_setup
+    - Updated to 0.0.15
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 18 Dec 2023 16:59:45 -0500
+
 kramden-overrides (0.4.93-0mantic1) mantic; urgency=medium
 
   * provider-reset
