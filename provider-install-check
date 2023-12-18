@@ -5,9 +5,8 @@ installed_snaps=(`snap list |grep -v Name | awk '{print $1}' | sort -u`)
 missing_snaps=() 
 failed=0
 
-echo "Doing a final check to validate the automated install..."
+#echo "Doing a final check to validate the automated install..."
 
-echo "Checking for required snaps..."
 for s in ${required_snaps[@]}
 do
     if printf '%s\0' "${installed_snaps[@]}" | grep -qwz $s
@@ -20,38 +19,42 @@ done
 
 if [ ${#missing_snaps[@]} -gt 0 ]
 then
-    echo "${#missing_snaps[@]} required snaps are not installed"
+    echo "Check for required snaps:  FAILED"
     echo "Missing snaps: ${missing_snaps[@]}"
     failed=1
-#else
-    #echo "All required snaps are installed"
+else
+    echo "Check for required snaps:  PASS"
 fi
 
-echo "Verifying the kramden-overrides package is installed..."
 if ! dpkg -l |grep kramden-overrides 2>&1 >/dev/null
 then
-	echo "kramden-overrides is not installed"
-	failed=1
+    echo "Verify the kramden-overrides package is installed: FAILED"
+    failed=1
+else
+    echo "Verify the kramden-overrides package is installed: PASS"
 fi
 
-echo "Verifying crash report prompting is disabled..."
 if grep enabled=1 /etc/default/apport 2>&1 >/dev/null
 then
-	echo "Apport is enabled"
-	failed=1
+    echo "Verify crash report prompting is disabled: FAILED"
+    failed=1
+else
+    echo "Verify crash report prompting is disabled: PASS"
 fi
 
-echo "Verifying unnecessary files have been cleaned up..."
 if [ -f /etc/apt/trusted.gpg.d/custom-iso-key.gpg ]
 then
+    echo "Verify unnecessary files have been cleaned up: FAILED"
     echo "custom iso key installed, should be removed"
     failed=1
+else
+    echo "Verify unnecessary files have been cleaned up: PASS"
 fi
 
 if [ $failed -gt 0 ]
 then
-    echo "Final installation verification has failed"
+    echo "Final installation verification: FAILED"
     exit 1
 else
-    echo "Final installation verification passed!"
+    echo "Final installation verification: PASSED"
 fi
