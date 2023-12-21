@@ -1,3 +1,10 @@
+kramden-overrides (0.4.96-0mantic1) mantic; urgency=medium
+
+  * gsettings-desktop-directories-prime
+    - set default browser to google-chrome
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 20 Dec 2023 11:50:32 -0500
+
 kramden-overrides (0.4.95-0mantic1) mantic; urgency=medium
 
   * provider_setup.AppImage
