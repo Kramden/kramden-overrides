@@ -1,3 +1,10 @@
+kramden-overrides (0.4.97-0mantic1) mantic; urgency=medium
+
+  * provider_setup.AppImage
+    - Updated to 0.0.17
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 21 Dec 2023 11:53:37 -0500
+
 kramden-overrides (0.4.96-0mantic1) mantic; urgency=medium
 
   * gsettings-desktop-directories-prime
