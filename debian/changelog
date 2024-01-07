@@ -1,3 +1,10 @@
+kramden-overrides (0.4.99-0mantic1) mantic; urgency=medium
+
+  * provider_setup.AppImage
+    - Updated to 0.0.19
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Sat, 06 Jan 2024 19:29:51 -0500
+
 kramden-overrides (0.4.98-0mantic1) mantic; urgency=medium
 
   * provider_setup.AppImage
