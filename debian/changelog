@@ -1,3 +1,11 @@
+kramden-overrides (0.4.101-0mantic2) mantic; urgency=medium
+
+  * debian/control
+    - updated depends to pull in select packages missing in
+      ubuntu-desktop-minimal
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 24 Jan 2024 11:41:45 -0500
+
 kramden-overrides (0.4.101-0mantic1) mantic; urgency=medium
 
   * provider_setup.AppImage

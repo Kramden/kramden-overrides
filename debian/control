@@ -7,6 +7,20 @@ Standards-Version: 4.1.3
 
 Package: kramden-overrides
 Architecture: amd64
-Depends: ${misc:Depends}
+Depends: cheese,
+ aisleriot,
+ gnome-mahjongg,
+ gnome-mines,
+ gnome-sudoku,
+ branding-ubuntu,
+ libreoffice-style-yaru,
+ libreoffice-gnome,
+ libreoffice-writer,
+ libreoffice-calc,
+ libreoffice-impress,
+ libreoffice-math,
+ simple-scan,
+ shotwell,
+ ${misc:Depends},
 Description: Kramden Ubuntu Overrides
  The default settings for a Kramden install of Ubuntu.
