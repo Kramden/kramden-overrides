@@ -3,17 +3,10 @@
 
 if [ "$USER" = "osload" ];
 then
-	# delete rc.local as it was only needed for provisioning
-	sudo rm -f /etc/rc.local
-	sudo userdel -rf osload
+	sudo /usr/share/provider/provider-reset-osload
 fi
 
 if [ "$USER" = "finaltest" ];
 then
-	# Delete the Kramden Deploy wifi connection
-	nmcli c delete kramden-deploy 2/dev/null || true
-
-	# Add connection for Kramden Guest network
-	nmcli device wifi connect "Kramden Guest" password iamatkramden name kramden-guest 2/dev/null || true
-	sudo userdel -rf finaltest
+	sudo /usr/share/provider/provider-reset-finaltest
 fi

@@ -5,6 +5,8 @@ icon.png usr/share/provider/
 provider-setup.desktop usr/share/applications/
 provider_setup.AppImage usr/lib/provider/
 provider-reset usr/share/provider/
+provider-reset-osload usr/share/provider/
+provider-reset-finaltest usr/share/provider/
 gsettings-desktop-directories-prime usr/share/provider/
 kramden-gsettings-prime.desktop etc/xdg/autostart/
 *.pdf usr/share/provider/
