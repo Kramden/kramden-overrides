@@ -1,32 +1,23 @@
 #!/bin/bash
 #
 
-if [ -f /var/cache/provider/done ];
+if [ $USER == "osload" ];
 then
-	exit
+	# delete rc.local as it was only needed for provisioning
+	rm -f /etc/rc.local
+	userdel -rf osload
+	# poweroff
+	poweroff
 fi
 
-homedir=/home/owner
-# ensure any google-chrome profiles created are removed
-rm -rf $homedir/.{config,cache}/google-chrome
-rm -f $homedir/.config/{gnome-initial-setup-done,kramden-gsettings-prime-done}
-rm -rf $homedir/.config/autostart
-rm -rf $homedir/.local/share/applications
+if [ $USER == "finaltest" ];
+then
+	# Delete the Kramden Deploy wifi connection
+	nmcli c delete kramden-deploy 2/dev/null || true
 
-# ensure all installed snaps have no user data
-rm -rf $homedir/snap
-
-# delete rc.local as it was only needed for provisioning
-rm -f /etc/rc.local
-
-mkdir -p /var/cache/provider
-touch /var/cache/provider/done
-
-# Delete the Kramden Deploy wifi connection
-nmcli c delete kramden-deploy 2/dev/null || true
-
-# Add connection for Kramden Guest network
-nmcli device wifi connect "Kramden Guest" password iamatkramden name kramden-guest 2/dev/null || true
-
-# poweroff
-poweroff
+	# Add connection for Kramden Guest network
+	nmcli device wifi connect "Kramden Guest" password iamatkramden name kramden-guest 2/dev/null || true
+	userdel -rf finaltest
+	# poweroff
+	poweroff
+fi
