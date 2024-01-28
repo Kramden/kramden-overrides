@@ -1,3 +1,10 @@
+kramden-overrides (0.5.0-0mantic1) UNRELEASED; urgency=medium
+
+  * provider_setup.AppImage
+    - Updated to 0.1.0
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Sat, 27 Jan 2024 20:53:36 -0500
+
 kramden-overrides (0.4.101-0mantic2) mantic; urgency=medium
 
   * debian/control
