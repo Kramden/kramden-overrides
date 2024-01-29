@@ -1,3 +1,11 @@
+kramden-overrides (0.5.0-0mantic3) mantic; urgency=medium
+
+  * debian/control
+    - Updated depends and recommends to reduce the number of packages to be
+      resolved during install
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 29 Jan 2024 15:44:43 -0500
+
 kramden-overrides (0.5.0-0mantic2) mantic; urgency=medium
 
   * debian/kramden-overrides.install
