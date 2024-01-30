@@ -1,3 +1,10 @@
+kramden-overrides (0.5.0-0mantic5) mantic; urgency=medium
+
+  * debian/control
+    - Dropped depends
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 29 Jan 2024 21:14:27 -0500
+
 kramden-overrides (0.5.0-0mantic4) mantic; urgency=medium
 
   * Drop most of the depends and recommend kramden-desktop as a meta package
