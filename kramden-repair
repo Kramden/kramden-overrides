@@ -1,0 +1,112 @@
+#!/bin/bash
+
+required_snaps=("frogsquash" "gnome-2048" "gnome-chess" "gnome-dictionary" "gnome-nibbles" "gnome-weather" "iagno" "mc-installer" "quadrapassel" "snap-store" "spotify" "vlc" "zoom-client")
+installed_snaps=(`snap list |grep -v Name | awk '{print $1}' | sort -u`)
+missing_snaps=() 
+failed=0
+
+#echo "Doing a final check to validate the automated install..."
+
+for s in ${required_snaps[@]}
+do
+    if printf '%s\0' "${installed_snaps[@]}" | grep -qwz $s
+    then
+        continue
+    else
+        missing_snaps+=(${s})
+    fi
+done
+
+if [ ${#missing_snaps[@]} -gt 0 ]
+then
+    echo "Check for required snaps:  FAILED"
+    echo "Missing snaps: ${missing_snaps[@]}"
+    echo "Installing: ${missing_snaps[@]}"
+    sudo snap install ${missing_snaps[@]}
+    if [ $? -eq 0 ]; then
+        echo "Successfully installed required snaps"
+    else
+	echo "Failed to install required snaps"
+        failed=1
+    fi
+else
+    echo "Check for required snaps:  PASS"
+fi
+
+if [ -x /etc/apt/sources.list.d/kramden-team-ubuntu-kramden-mantic.sources ]; then
+    echo "Kramden PPA not configured, enabling now"
+    sudo add-apt-repository -y ppa:kramden-team/kramden
+    if [ $? -eq 0 ]; then
+        echo "Successfully enabled Kramden PPA"
+    else
+	echo "Failed to enable Kramden PPA"
+        failed=1
+    fi
+fi
+
+if ! dpkg -l |grep kramden-overrides 2>&1 >/dev/null
+then
+    echo "Verify the kramden-overrides package is installed: FAILED"
+    echo "Installing kramden-overrides package"
+    sudo apt install -y kramden-overrides
+    if [ $? -eq 0 ]; then
+        echo "Successfully installed Kramden-overrides package"
+    else
+	echo "Failed to install kramden-overrides package"
+        failed=1
+    fi
+else
+    echo "Verify the kramden-overrides package is installed: PASS"
+fi
+
+if ! dpkg -l |grep kramden-desktop 2>&1 >/dev/null
+then
+    echo "Verify the kramden-desktop package is installed: FAILED"
+    echo "Installing kramden-desktop package"
+    sudo apt install -y kramden-desktop
+    if [ $? -eq 0 ]; then
+        echo "Successfully installed Kramden-desktop package"
+    else
+	echo "Failed to install kramden-desktop package"
+        failed=1
+    fi
+else
+    echo "Verify the kramden-desktop package is installed: PASS"
+fi
+
+if grep enabled=1 /etc/default/apport 2>&1 >/dev/null
+then
+    echo "Verify crash report prompting is disabled: FAILED"
+    sudo sed -e "s|enabled=1$|enabled=0|g" /etc/default/apport
+    if [ $? -eq 0 ]; then
+        echo "Successfully disabled crash report prompting"
+    else
+	echo "Failed to disable crash report prompting"
+        failed=1
+    fi
+else
+    echo "Verify crash report prompting is disabled: PASS"
+fi
+
+if [ -f /etc/apt/trusted.gpg.d/custom-iso-key.gpg ]
+then
+    echo "Verify unnecessary files have been cleaned up: FAILED"
+    echo "custom iso key installed, should be removed"
+    sudo rm /etc/apt/trusted.gpg.d/custom-iso-key.gpg
+    if [ $? -eq 0 ]; then
+        echo "Successfully cleaned up repository keys"
+    else
+	echo "Failed to clean up repository keys"
+        failed=1
+    fi
+else
+    echo "Verify unnecessary files have been cleaned up: PASS"
+fi
+
+if [ $failed -gt 0 ]
+then
+    echo "Final installation repair: FAILED"
+    exit 1
+else
+    echo "Final installation repair: PASSED"
+fi
