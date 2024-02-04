@@ -14,3 +14,4 @@ kramden-intro.desktop etc/xdg/autostart/
 kramden-intro.desktop usr/share/applications/
 kramden-intro usr/share/provider/
 provider-install-check usr/bin/
+kramden-repair usr/bin/
