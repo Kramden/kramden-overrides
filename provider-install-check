@@ -34,6 +34,22 @@ else
     echo "Verify the kramden-overrides package is installed: PASS"
 fi
 
+if ! dpkg -l |grep kramden-desktop 2>&1 >/dev/null
+then
+    echo "Verify the kramden-desktop package is installed: FAILED"
+    failed=1
+else
+    echo "Verify the kramden-desktop package is installed: PASS"
+fi
+
+if ! dpkg -l |grep libreoffice-writer 2>&1 >/dev/null
+then
+    echo "Verify the libreoffice package is installed: FAILED"
+    failed=1
+else
+    echo "Verify the libreoffice package is installed: PASS"
+fi
+
 if grep enabled=1 /etc/default/apport 2>&1 >/dev/null
 then
     echo "Verify crash report prompting is disabled: FAILED"
