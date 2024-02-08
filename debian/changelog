@@ -1,3 +1,60 @@
+kramden-overrides (0.5.0-0mantic7) mantic; urgency=medium
+
+  * provider-install-check
+    - Added checks for kramden-desktop and libreoffice-writer packages
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Sat, 03 Feb 2024 23:45:37 -0500
+
+kramden-overrides (0.5.0-0mantic6) mantic; urgency=medium
+
+  * kramden-repair
+    - Added a script to handle repairing problems found in the install check
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Sat, 03 Feb 2024 20:48:00 -0500
+
+kramden-overrides (0.5.0-0mantic5) mantic; urgency=medium
+
+  * debian/control
+    - Dropped depends
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 29 Jan 2024 21:14:27 -0500
+
+kramden-overrides (0.5.0-0mantic4) mantic; urgency=medium
+
+  * Drop most of the depends and recommend kramden-desktop as a meta package
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 29 Jan 2024 17:06:14 -0500
+
+kramden-overrides (0.5.0-0mantic3) mantic; urgency=medium
+
+  * debian/control
+    - Updated depends and recommends to reduce the number of packages to be
+      resolved during install
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 29 Jan 2024 15:44:43 -0500
+
+kramden-overrides (0.5.0-0mantic2) mantic; urgency=medium
+
+  * debian/kramden-overrides.install
+    - split osload and finaltest reset scripts
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Sun, 28 Jan 2024 11:02:37 -0500
+
+kramden-overrides (0.5.0-0mantic1) mantic; urgency=medium
+
+  * provider_setup.AppImage
+    - Updated to 0.1.0
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Sat, 27 Jan 2024 20:53:36 -0500
+
+kramden-overrides (0.4.101-0mantic2) mantic; urgency=medium
+
+  * debian/control
+    - updated depends to pull in select packages missing in
+      ubuntu-desktop-minimal
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 24 Jan 2024 11:41:45 -0500
+
 kramden-overrides (0.4.101-0mantic1) mantic; urgency=medium
 
   * provider_setup.AppImage
