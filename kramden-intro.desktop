@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Kramden Computer Info
+Icon=/usr/share/provider/icon.png
+Exec=/usr/share/provider/kramden-intro
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;System;
+AutostartCondition=unless-exists kramden-intro-done

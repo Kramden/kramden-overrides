@@ -1,0 +1,76 @@
+#!/bin/bash
+
+required_snaps=("frogsquash" "gnome-2048" "gnome-chess" "gnome-dictionary" "gnome-nibbles" "gnome-weather" "iagno" "mc-installer" "quadrapassel" "snap-store" "spotify" "vlc" "zoom-client")
+installed_snaps=(`snap list |grep -v Name | awk '{print $1}' | sort -u`)
+missing_snaps=() 
+failed=0
+
+#echo "Doing a final check to validate the automated install..."
+
+for s in ${required_snaps[@]}
+do
+    if printf '%s\0' "${installed_snaps[@]}" | grep -qwz $s
+    then
+        continue
+    else
+        missing_snaps+=(${s})
+    fi
+done
+
+if [ ${#missing_snaps[@]} -gt 0 ]
+then
+    echo "Check for required snaps:  FAILED"
+    echo "Missing snaps: ${missing_snaps[@]}"
+    failed=1
+else
+    echo "Check for required snaps:  PASS"
+fi
+
+if ! dpkg -l |grep kramden-overrides 2>&1 >/dev/null
+then
+    echo "Verify the kramden-overrides package is installed: FAILED"
+    failed=1
+else
+    echo "Verify the kramden-overrides package is installed: PASS"
+fi
+
+if ! dpkg -l |grep kramden-desktop 2>&1 >/dev/null
+then
+    echo "Verify the kramden-desktop package is installed: FAILED"
+    failed=1
+else
+    echo "Verify the kramden-desktop package is installed: PASS"
+fi
+
+if ! dpkg -l |grep libreoffice-writer 2>&1 >/dev/null
+then
+    echo "Verify the libreoffice package is installed: FAILED"
+    failed=1
+else
+    echo "Verify the libreoffice package is installed: PASS"
+fi
+
+if grep enabled=1 /etc/default/apport 2>&1 >/dev/null
+then
+    echo "Verify crash report prompting is disabled: FAILED"
+    failed=1
+else
+    echo "Verify crash report prompting is disabled: PASS"
+fi
+
+if [ -f /etc/apt/trusted.gpg.d/custom-iso-key.gpg ]
+then
+    echo "Verify unnecessary files have been cleaned up: FAILED"
+    echo "custom iso key installed, should be removed"
+    failed=1
+else
+    echo "Verify unnecessary files have been cleaned up: PASS"
+fi
+
+if [ $failed -gt 0 ]
+then
+    echo "Final installation verification: FAILED"
+    exit 1
+else
+    echo "Final installation verification: PASSED"
+fi

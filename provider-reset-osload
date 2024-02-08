@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+
+# delete rc.local as it was only needed for provisioning
+rm -f /etc/rc.local
+userdel -rf osload
+# poweroff
+poweroff
