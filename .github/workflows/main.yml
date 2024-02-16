@@ -7,13 +7,15 @@ jobs:
       strategy:
         max-parallel: 1
       steps:
-      - name: Prepare Build
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Prepare build
         run: |
           sudo apt-get install -y dpkg-dev rsync
           VERSION=$(dpkg-parsechangelog -S Version|awk -F "-" '{print $1}')
           mkdir -p ${{ github.workspace }}/artifacts/kramden-overrides-$VERSION
           rsync -r --exclude=.git --exclude=.github --exclude=artifacts . ${{ github.workspace }}/artifacts/kramden-overrides-$VERSION/
-      - name: Publish Build
+      - name: Publish build
         uses: yuezk/publish-ppa-package@main
         with:
           repository: 'ppa:kramden-team/kramden-test'
