@@ -4,13 +4,15 @@ on:
 jobs:
     publish:
       runs-on: ubuntu-latest
+      strategy:
+        max-parallel: 1
       steps:
       - name: Prepare Build
         run: |
-          sudo apt-get install -y dpkg-dev
+          sudo apt-get install -y dpkg-dev rsync
           VERSION=$(dpkg-parsechangelog -S Version|awk -F "-" '{print $1}')
           mkdir -p ${{ github.workspace }}/artifacts/kramden-overrides-$VERSION
-          cp -rp * ${{ github.workspace }}/artifacts/kramden-overrides-$VERSION/
+          rsync -r --exclude=.git --exclude=.github --exclude=artifacts . ${{ github.workspace }}/artifacts/kramden-overrides-$VERSION/
       - name: Publish Build
         uses: yuezk/publish-ppa-package@main
         with:
