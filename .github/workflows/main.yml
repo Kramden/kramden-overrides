@@ -5,10 +5,17 @@ jobs:
     publish:
       runs-on: ubuntu-latest
       steps:
-      - uses: yuezk/publish-ppa-package@main
+      - name: Prepare Build
+        run: |
+          sudo apt-get install -y dpkg-dev
+          VERSION=$(dpkg-parsechangelog -S Version|awk -F "-" '{print $1}')
+          mkdir -p ${{ github.workspace }}/artifacts/kramden-overrides-$VERSION
+          cp -rp * ${{ github.workspace }}/artifacts/kramden-overrides-$VERSION/
+      - name: Publish Build
+        uses: yuezk/publish-ppa-package@main
         with:
           repository: 'ppa:kramden-team/kramden-test'
           gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
           gpg_passphrase: ${{ secrets.PPA_GPG_PASSPHRASE }}
           series: "mantic noble"
-          pkgdir: '.'
+          pkgdir: '${{ github.workspace }}/artifacts/kramden-overrides-*/'

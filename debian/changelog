@@ -1,3 +1,9 @@
+kramden-overrides (0.5.1) UNRELEASED; urgency=medium
+
+  * Latest snapshot
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 16 Feb 2024 14:23:37 -0500
+
 kramden-overrides (0.5.0-0mantic7) mantic; urgency=medium
 
   * provider-install-check
