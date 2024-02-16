@@ -1,0 +1,13 @@
+name: Publish PPA kramden-test
+on:
+    workflow_dispatch:
+jobs:
+    publish:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: yuezk/publish-ppa-package@main
+        with:
+          repository: 'ppa:kramden-team/kramden-test'
+          gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
+          series: "mantic noble"
+          pkgdir: '${{ github.workspace }}'
