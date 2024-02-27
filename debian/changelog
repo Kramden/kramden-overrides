@@ -1,4 +1,11 @@
-kramden-overrides (0.5.1-0) UNRELEASED; urgency=medium
+kramden-overrides (0.5.2-0) UNRELEASED; urgency=medium
+
+  * debian/control
+    - turn the recommends for kramden-desktop into a depends
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Tue, 27 Feb 2024 08:51:36 -0500
+
+kramden-overrides (0.5.1-0) mantic; urgency=medium
 
   * Latest snapshot
 

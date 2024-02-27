@@ -8,6 +8,6 @@ Standards-Version: 4.1.3
 Package: kramden-overrides
 Architecture: amd64
 Depends: ${misc:Depends},
-Recommends: kramden-desktop,
+ kramden-desktop,
 Description: Kramden Ubuntu Overrides
  The default settings for a Kramden install of Ubuntu.
