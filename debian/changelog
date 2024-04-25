@@ -1,3 +1,10 @@
+kramden-overrides (0.5.3.1-0) noble; urgency=medium
+
+  * debian/control
+    - Make kramden-desktop a recommends, no longer needed as a dep
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 25 Apr 2024 16:37:41 -0400
+
 kramden-overrides (0.5.3-0) noble; urgency=medium
 
   * Fixed gsettings override for clock-format for noble support
