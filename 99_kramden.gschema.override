@@ -6,8 +6,10 @@ picture-uri-dark = 'file:///usr/share/backgrounds/kramden.png'
 always-show-log-out = true
 favorite-apps = [ 'google-chrome.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'rhythmbox.desktop', 'libreoffice-writer.desktop', 'vlc_vlc.desktop', 'snap-store_snap-store.desktop', 'yelp.desktop', 'kramden-intro.desktop' ]
 
-[org.gnome.desktop.interface:ubuntu]
+[org.gnome.desktop.interface]
 clock-format = '12h'
+
+[org.gnome.desktop.interface:ubuntu]
 color-scheme = 'prefer-dark'
 gtk-theme = 'Yaru-blue-dark'
 icon-theme = 'Yaru-blue-dark'

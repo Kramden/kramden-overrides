@@ -1,3 +1,9 @@
+kramden-overrides (0.5.3-0) noble; urgency=medium
+
+  * Fixed gsettings override for clock-format for noble support
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 25 Apr 2024 16:34:01 -0400
+
 kramden-overrides (0.5.2-0) mantic; urgency=medium
 
   * debian/control
