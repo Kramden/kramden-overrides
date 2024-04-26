@@ -16,7 +16,7 @@ jobs:
         mkdir -p ${{ github.workspace }}/artifacts/kramden-overrides-$VERSION
         rsync -r --exclude=.git --exclude=.github --exclude=artifacts . ${{ github.workspace }}/artifacts/kramden-overrides-$VERSION/
     - name: Publish build
-      uses: yuezk/publish-ppa-package@main
+      uses: yuezk/publish-ppa-package@v1
       with:
         repository: 'ppa:kramden-team/kramden-test'
         gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
