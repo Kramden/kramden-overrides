@@ -1,10 +1,10 @@
-kramden-overrides (0.5.5-0) UNRELEASED; urgency=medium
+kramden-overrides (0.5.5-0) noble; urgency=medium
 
   * kramden.cfg
     - Install an update-manager override to attempt to leave PPAs enabled on
       do-release-upgrade
 
- -- Ken VanDine <ken.vandine@canonical.com>  Fri, 26 Apr 2024 11:50:24 -0400
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 26 Apr 2024 12:05:18 -0400
 
 kramden-overrides (0.5.4-0) noble; urgency=medium
 
