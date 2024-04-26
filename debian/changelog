@@ -1,3 +1,10 @@
+kramden-overrides (0.5.4-0) noble; urgency=medium
+
+  * Eject at the end of final test to ensure there is no disks in the CD/DVD
+    drive
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 26 Apr 2024 10:10:19 -0400
+
 kramden-overrides (0.5.3.1-0) noble; urgency=medium
 
   * debian/control
