@@ -7,5 +7,9 @@ nmcli c delete kramden-deploy 2/dev/null || true
 # Add connection for Kramden Guest network
 nmcli device wifi connect "Kramden Guest" password iamatkramden name kramden-guest 2/dev/null || true
 userdel -rf finaltest
+
+# eject CD/DVD drive
+eject 2>/dev/null
+
 # poweroff
 poweroff
