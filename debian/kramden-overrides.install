@@ -15,3 +15,4 @@ kramden-intro.desktop usr/share/applications/
 kramden-intro usr/share/provider/
 provider-install-check usr/bin/
 kramden-repair usr/bin/
+kramden.cfg etc/update-manager/release-upgrades.d/
