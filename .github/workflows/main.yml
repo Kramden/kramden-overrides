@@ -21,5 +21,5 @@ jobs:
         repository: 'ppa:kramden-team/kramden-test'
         gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
         gpg_passphrase: ${{ secrets.PPA_GPG_PASSPHRASE }}
-        series: "noble"
+        series: "mantic"
         pkgdir: '${{ github.workspace }}/artifacts/kramden-overrides-*/'
