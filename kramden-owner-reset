@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# This script will erase user data to reset the Owner account
+#
+
+read -p "Are you sure you want to reset the Owner account? Y/N  " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	# Only allow the owner account to reset the owner account
+	if [[ $USER == "owner" ]]
+	then
+		echo "Confirmed, resetting Owner account"
+		rm -rf /home/owner/snap
+		rm -rf /home/owner/.{local,config,cache,bash_history}
+		sudo poweroff
+	fi
+fi
