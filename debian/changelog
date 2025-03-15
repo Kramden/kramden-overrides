@@ -1,3 +1,9 @@
+kramden-overrides (0.5.7) noble; urgency=medium
+
+  * Use proper native version number
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Sat, 15 Mar 2025 17:34:27 -0400
+
 kramden-overrides (0.5.6-0) noble; urgency=medium
 
   * kramden-owner-reset
