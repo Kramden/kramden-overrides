@@ -1,9 +1,11 @@
-kramden-overrides (0.5.6-0) UNRELEASED; urgency=medium
+kramden-overrides (0.5.6-0) noble; urgency=medium
 
   * kramden-owner-reset
     - New script to reset data for owner account
+  * Dropped kramden-intro in favor of kramden-device
+  * Don't expect gnome-dictionary to be installed, it's abandoned
 
- -- Ken VanDine <ken.vandine@canonical.com>  Fri, 18 Oct 2024 12:28:59 -0400
+ -- Ken VanDine <ken.vandine@canonical.com>  Sat, 15 Mar 2025 17:23:09 -0400
 
 kramden-overrides (0.5.5-0) noble; urgency=medium
 

@@ -2,17 +2,9 @@ kramden.png usr/share/backgrounds/
 99_kramden.gschema.override usr/share/glib-2.0/schemas/
 provider.conf etc/
 icon.png usr/share/provider/
-provider-setup.desktop usr/share/applications/
-provider_setup.AppImage usr/lib/provider/
-provider-reset usr/share/provider/
-provider-reset-osload usr/share/provider/
-provider-reset-finaltest usr/share/provider/
 gsettings-desktop-directories-prime usr/share/provider/
 kramden-gsettings-prime.desktop etc/xdg/autostart/
 *.pdf usr/share/provider/
-kramden-intro.desktop etc/xdg/autostart/
-kramden-intro.desktop usr/share/applications/
-kramden-intro usr/share/provider/
 provider-install-check usr/bin/
 kramden-repair usr/bin/
 kramden-owner-reset usr/bin/

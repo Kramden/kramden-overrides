@@ -1,6 +1,6 @@
 #!/bin/bash
 
-required_snaps=("frogsquash" "gnome-2048" "gnome-chess" "gnome-dictionary" "gnome-nibbles" "gnome-weather" "iagno" "mc-installer" "quadrapassel" "snap-store" "spotify" "vlc" "zoom-client")
+required_snaps=("frogsquash" "gnome-2048" "gnome-chess" "gnome-nibbles" "gnome-weather" "iagno" "mc-installer" "quadrapassel" "snap-store" "spotify" "vlc" "zoom-client")
 installed_snaps=(`snap list |grep -v Name | awk '{print $1}' | sort -u`)
 missing_snaps=() 
 failed=0
